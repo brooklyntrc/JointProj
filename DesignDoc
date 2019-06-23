@@ -1,0 +1,35 @@
+Design Doc
+
+Project Name: Online Blog
+Team Members: Jiaxi, Stephen
+
+Summary: Build an online application of a blog. The blog will have topics users can comment on as well as create their own sections. Each username will be unique and users can have a nickname to associate themselves as. Nicknames will not be unique. Each topic comment can have a direct reply to that comment but can only be chained once. (ie. one comment can have as many replys to the comments but the reply cannot have a reply to it)
+
+Languages 
+Front End- HTML, CSS, JS
+Back End- JS/Python
+DB - Google Firebase
+
+Structure:
+User- {username: String,
+		password: String, 
+		adminRole: String,}
+
+Topics- {
+	name: String
+	comments: List(comments)
+	time: Time
+}
+
+Comments- {
+	owner: User
+	replys: List(Strings),
+	time: Time
+}
+
+Layout:
+ Login Page- user can login into their account, create a new account.
+ Register Page- User can create a new account. 
+ Admin Login Page- Admins can log in.
+ Home Page- Displays topics with most as a link and a search bar to search for topics.
+ Topics page- comments displayed from most recently added topic and replys to commets. Topics page show last 20 comments and a drop down link for comments that have replys to it.
